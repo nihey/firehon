@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'firehon',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://firehon.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
