@@ -1,0 +1,7 @@
+.uk-height-1-1 > .ember-view {
+  height: inherit;
+}
+
+.uk-panel-box {
+  border: 1px solid #abc;
+}
