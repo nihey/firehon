@@ -2,11 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
+    /* Access a namespace, and if it does not exist, create it. */
     access: function() {
-      this.store.createRecord('namespace', {
-        id: btoa(this.get('namespace')),
-        name: this.get('namespace'),
-      }).save();
+      var id = btoa(this.get('namespace'));
+      this.store.find('namespace', id).then(() => {
+        this.transitionToRoute('accounts', {namespace: this.get('namespace')});
+      },
+      () => {
+        this.store.createRecord('namespace', {
+          id,
+          name: this.get('namespace'),
+        }).save().then(() => {;
+          this.transitionToRoute('accounts', {namespace: this.get('namespace')});
+        });
+      });
     },
   },
 });
