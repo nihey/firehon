@@ -1,7 +1,6 @@
 # Firehon
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Firehon is a [Firebase](http://firebase.com/) version of [Hon](https://github.com/nihey/hon) money management system.
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/nihey/firehon.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
