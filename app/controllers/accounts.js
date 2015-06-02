@@ -10,5 +10,9 @@ export default Ember.Controller.extend({
         this.model.save();
       });
     },
+
+    accountDetails: function(id) {
+      this.transitionToRoute('transactions', this.model.get('name'), id)
+    },
   },
 });

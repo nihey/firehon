@@ -1,0 +1,31 @@
+<div style="vertical-align: top; display: inline-block; margin-top: 1rem;">
+  <form class="uk-panel uk-panel-box uk-form" {{action 'addTransaction' on="submit"}}>
+    <div class="uk-form-row">
+      {{input value=description required="true" class="uk-width-1-1 uk-form-large" type="text" placeholder="Description"}}
+    </div>
+    <div class="uk-form-row">
+      {{input value=value required="true" class="uk-width-1-1 uk-form-large" type="number" placeholder="Value"}}
+    </div>
+    <div class="uk-form-row">
+      <button class="uk-width-1-1 uk-button uk-button-primary uk-button-large" type="submit">
+        Add transaction
+      </button>
+    </div>
+  </form>
+  <table class="uk-table">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each transaction in model.transactions}}
+        <tr>
+          <td>{{ transaction.description }}</td>
+          <td>{{ transaction.value }}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

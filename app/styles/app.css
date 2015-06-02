@@ -5,3 +5,11 @@
 .uk-panel-box {
   border: 1px solid #abc;
 }
+
+.uk-table td {
+  text-align: left;
+}
+
+.uk-vertical-align {
+  font-size: 1em;
+}
