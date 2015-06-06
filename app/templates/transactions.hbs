@@ -16,6 +16,7 @@
     <thead>
       <tr>
         <th>Description</th>
+        <th>Datetime</th>
         <th>Value</th>
       </tr>
     </thead>
@@ -23,6 +24,7 @@
       {{#each transaction in model.transactions}}
         <tr>
           <td>{{ transaction.description }}</td>
+          <td>{{ transaction.datetime }}</td>
           <td>{{ transaction.value }}</td>
         </tr>
       {{/each}}
