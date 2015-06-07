@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
         this.store.createRecord('namespace', {
           id,
           name: this.get('namespace'),
-        }).save().then(() => {;
+        }).save().then(() => {
           this.transitionToRoute('accounts', {namespace: this.get('namespace')});
         });
       });

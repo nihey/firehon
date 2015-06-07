@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     },
 
     accountDetails: function(id) {
-      this.transitionToRoute('transactions', this.model.get('name'), id)
+      this.transitionToRoute('transactions', this.model.get('name'), id);
     },
   },
 });
